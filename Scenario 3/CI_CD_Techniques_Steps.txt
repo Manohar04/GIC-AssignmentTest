@@ -1,0 +1,13 @@
+CI/CD Techniques Steps :
+
+
+  1. Set Up Jenkins: Install Jenkins on a server or machine where need to manage CI/CD pipelines.
+  2. Install Required Plugins: Install Jenkins plugins like "Pipeline," "Docker Pipeline," and any other plugins needed for specific microservices and deployment strategy.
+  3. Configure Jenkins Pipeline: Create a Jenkinsfile in source code repo for each microservice to define the build, test, and deploy stages.
+  4. Implement a deployment strategy (e.g. blue-green) for the microservices : Depending on choice of deployment strategy (e.g., rolling, blue-green), implement the deployment steps accordingly in the 'Deploy' stage of the Jenkinsfile.
+  5. Configure Jenkins Jobs: Create Jenkins jobs for each microservice, using the respective Jenkinsfile.
+  6. Set Up Webhooks or Polling: Configure your source control system (e.g., GitHub, Bitbucket) to trigger the Jenkins pipeline using webhooks.
+  7. Run and Monitor the Pipeline: Run the pipeline for each microservice and monitor the progress and logs in Jenkins.
+
+
+

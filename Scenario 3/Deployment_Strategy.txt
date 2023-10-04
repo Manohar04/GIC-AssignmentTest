@@ -1,0 +1,22 @@
+stage('Deploy') {
+    steps {
+        // Deploy to blue environment
+        sh 'kubectl apply -f blue-deployment.yaml'
+        sh 'kubectl apply -f blue-service.yaml'
+        sh 'kubectl apply -f ingress.yaml'
+        
+        // Wait for deployment to stabilize
+        
+        // Switch traffic to blue environment
+        sh 'kubectl apply -f ingress-blue.yaml'
+        
+        // Deploy to green environment (new version)
+        sh 'kubectl apply -f green-deployment.yaml'
+        sh 'kubectl apply -f green-service.yaml'
+        
+        // Wait for deployment to stabilize
+        
+        // Switch traffic to green environment
+        sh 'kubectl apply -f ingress-green.yaml'
+    }
+}

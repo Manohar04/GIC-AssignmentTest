@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    
+    stages {
+
+        stage('Checkout') {
+            steps {
+                // Checkout your source code from the version control repository
+                // (e.g., Git)
+                checkout scm
+            }
+        }
+        stage('Build') {
+            steps {
+                // Build microservice
+                sh 'npm install'
+            }
+        }
+        stage('Test') {
+            steps {
+                // Run tests
+                sh 'npm test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                // Deploy using your chosen strategy (e.g., rolling, blue-green)
+                // Implement deployment scripts or Docker/Kubernetes deployment commands
+            }
+        }
+    }
+}

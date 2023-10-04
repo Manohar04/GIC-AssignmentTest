@@ -1,0 +1,6 @@
+AWS Deployment Steps :
+
+- Create terraform script for variables and declare the variable used in script
+- Create terraform script for variables used in script and provide the values eg. AWS credentials
+- Create terraform script to create S3 bucket for front end in AWS and specify the file details 
+- Create terraform script for creating EC2 instance for front end services and assign the IAM roles, ingress and egress rules, security policy required 

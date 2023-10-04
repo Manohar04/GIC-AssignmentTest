@@ -1,0 +1,27 @@
+On-Prem Server Deployment Steps:
+
+
+
+1. Specify Hardware or VM Requirements: The hardware requirements for the on-premises server or virtual machine (VM) will depend on the size and expected traffic of  web application. Generally, we need to consider aspects such as CPU, memory (RAM), storage (SSD for faster disk I/O) and network bandwidth etc.
+
+2. Choose an Operating System: Select an appropriate operating system based on application compatibility, and security requirements. Common choices for web applications can be Linux or windows:
+
+3. Describe the Deployment Process: We can automate the entire deployment method using CI/CD pipelines. Creare the required pipeline using any tool like Jenkins. Start from source code checkin, Infra provisioning/configuration, Build, Test, Deploy, Release and monitor.
+
+Need to follow below mentioned steps for Deployment
+  a. Setup the OS: Install the chosen operating system on the server or VM based on the installation instructions provided by the OS vendor.
+  b. Install Necessary Software, packages and Dependencies: Install a web server software such as Apache, Nginx, or Microsoft IIS based on your application requirements.
+  c. Install a database server (e.g., MySQL, PostgreSQL, or SQL Server) if requires.
+  d. Install necessary programming languages, frameworks, or runtime environments needed for application.
+  e. Configure the Web Server: Configure the web server to serve application files. Configure virtual hosts, SSL certificates, and other settings as required.
+  f. Configure the web server to handle requests to application and forward them to the appropriate backend services.
+  g. Deploy the Web Application: Upload application code and files to the appropriate directories on the server.
+  h. Configure  web server to point to these files and handle requests accordingly.
+
+4. Ensure Security and Updates:
+  a. Firewall and Network Security: Configure a firewall to control inbound and outbound traffic. Only open necessary ports for your application and services.
+  b. Regular Backup and Disaster Recovery: Implement a regular backup strategy to ensure data safety and quick recovery in case of failures.
+  c. Patch Management: Regularly apply security patches and updates to the operating system, web server, and other software components.
+  d. Monitoring and Logging: Implement monitoring solutions to track server performance, application performance, and security events.
+
+
